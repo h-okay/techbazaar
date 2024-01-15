@@ -69,3 +69,5 @@ end
 gem "dotenv-rails", "~> 2.8"
 
 gem "pg", "~> 1.5"
+
+gem "jsbundling-rails", "~> 1.2"
