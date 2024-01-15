@@ -5,7 +5,6 @@ class AddProductsTable < ActiveRecord::Migration[7.1]
       t.integer :quantity, null:false
       t.float :price, null:false
       t.integer :category, null:false, default: 0
-      t.boolean :discount, null:false
       
       # created_at & updated_at
       t.timestamps

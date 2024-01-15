@@ -3,4 +3,5 @@ class Product < ApplicationRecord
         console: 0,
         game: 1
     }
+    has_one :discount
 end
