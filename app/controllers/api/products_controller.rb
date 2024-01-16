@@ -2,15 +2,20 @@ module Api
     class ProductsController < ApplicationController
         def index
             products = Product.all.map do |product|
-                {
+                response = {
                     name: product.name,
                     quantity: product.quantity,
                     price: product.price,
                     category: product.category,
-                    discount: get_discount_amount(product)
-
                 }
+
+                if has_active_discount?(product) 
+                    response["discount"] = get_discount_amount(product)    
+                end
+                
+                response
             end
+            
             render(json: { products: products })
         end
 
