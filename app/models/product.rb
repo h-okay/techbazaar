@@ -3,5 +3,5 @@ class Product < ApplicationRecord
         console: 0,
         game: 1
     }
-    has_one :discount
+    has_many :discount # Int he future we can implement region based discounts
 end
