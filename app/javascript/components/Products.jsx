@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Product from "./Product";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -22,12 +23,10 @@ export default function Products() {
   }
 
   return (
-    <div>
-      <ul>
-        {products.map((product, index) => (
-          <li key={"product_" + index}>{product.name}</li>
-        ))}
-      </ul>
+    <div className="grid md:grid-cols-6 grid-cols-2 mx-auto lg:w-2/3 w-full py-20 px-5 gap-5">
+      {products.map((product, index) => (
+        <Product key={"product_" + index} product={product} />
+      ))}
     </div>
   );
 }
