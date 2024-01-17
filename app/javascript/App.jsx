@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Products from "./components/Products";
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
+import Helpline from "./components/Helpline";
 
 export default function App() {
   return (
-    <main>
+    <main className="dark">
+      <Helpline />
       <Navbar />
       <Intro />
-      <Products />
     </main>
   );
 }
